@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Business Card</string>
+    <string name="full_name">Max Ain</string>
+    <string name="title">Android Developer</string>
+    <string name="phone">09-23</string>
+    <string name="social">@maxain.bsky</string>
+    <string name="email">imenolys23@gmail.com</string>
+</resources>
