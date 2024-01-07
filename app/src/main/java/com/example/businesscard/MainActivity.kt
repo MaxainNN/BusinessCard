@@ -6,10 +6,17 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.rounded.Call
+import androidx.compose.material.icons.rounded.Email
+import androidx.compose.material.icons.rounded.Menu
+import androidx.compose.material.icons.rounded.Share
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -17,6 +24,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -63,6 +71,7 @@ fun Card() {
         Image(
             painter = image,
             contentDescription = null,
+            modifier = Modifier.padding(10.dp),
             contentScale = ContentScale.Fit,
             alpha = 0.8f
         )
@@ -87,21 +96,90 @@ fun Card() {
         horizontalAlignment = Alignment.CenterHorizontally
 
     ) {
-        Text(
-            text = stringResource(R.string.phone),
-            modifier = Modifier.padding(10.dp),
-            color = Color(0xFFC7114F)
-        )
-        Text(
-            text = stringResource(R.string.social),
-            modifier = Modifier.padding(bottom = 10.dp),
-            color = Color(0xFF4B16AA)
-        )
-        Text(
-            text = stringResource(R.string.email),
-            modifier = Modifier.padding(bottom = 20.dp),
-            color = Color(0xFFCA3C0F)
-        )
+        Row(
+            horizontalArrangement = Arrangement.Center,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Icon(
+                imageVector = Icons.Rounded.Call,
+                contentDescription = "Phone",
+                tint = Color(0xFF3ddc84)
+            )
+            Text(
+                text = stringResource(R.string.phone),
+                modifier = Modifier.padding(10.dp),
+                fontSize = 24.sp,
+                color = Color(0xFF3ddc84)
+            )
+
+        }
+        Row(
+            horizontalArrangement = Arrangement.Center,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Icon(
+                imageVector = Icons.Rounded.Share,
+                contentDescription = "Social",
+                modifier = Modifier.padding(10.dp),
+                tint = Color(0xFF3ddc84)
+            )
+            Text(
+                text = stringResource(R.string.social),
+                modifier = Modifier.padding(bottom = 10.dp),
+                fontSize = 24.sp,
+                color = Color(0xFF3ddc84)
+            )
+        }
+        Row(
+            horizontalArrangement = Arrangement.Center,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Icon(
+                imageVector = Icons.Rounded.Email,
+                contentDescription = "Mail",
+                modifier = Modifier.padding(10.dp),
+                tint = Color(0xFF3ddc84)
+            )
+            Text(
+                text = stringResource(R.string.email),
+                modifier = Modifier.padding(bottom = 20.dp),
+                fontSize = 24.sp,
+                color = Color(0xFF3ddc84)
+            )
+        }
+//        Text(
+//            text = stringResource(R.string.phone),
+//            modifier = Modifier.padding(10.dp),
+//            fontSize = 24.sp,
+//            color = Color(0xFF3ddc84)
+//        )
+//        Text(
+//            text = stringResource(R.string.social),
+//            modifier = Modifier.padding(bottom = 10.dp),
+//            fontSize = 24.sp,
+//            color = Color(0xFF3ddc84)
+//        )
+//        Text(
+//            text = stringResource(R.string.email),
+//            modifier = Modifier.padding(bottom = 20.dp),
+//            fontSize = 24.sp,
+//            color = Color(0xFF3ddc84)
+//        )
+//        Icon(
+//            imageVector = Icons.Rounded.Call,
+//            contentDescription = "Phone",
+//            tint = Color(0xFF3ddc84)
+//        )
+//        Icon(
+//            imageVector = Icons.Rounded.Share,
+//            contentDescription = "Social",
+//            tint = Color(0xFF3ddc84)
+//        )
+//        Icon(
+//            imageVector = Icons.Rounded.Email,
+//            contentDescription = "Mail",
+//            tint = Color(0xFF3ddc84)
+//        )
     }
 }
 
